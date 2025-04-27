@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discover Washington, DC</title>
+  <style>
+    body { font-family: 'Helvetica Neue', Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f4; color: #333; }
+    header { background: #003366; color: #fff; padding: 20px; text-align: center; }
+    nav { background: #00509e; display: flex; justify-content: center; }
+    nav a { color: white; padding: 14px 20px; text-decoration: none; display: block; font-weight: bold; }
+    nav a:hover { background: #0066cc; }
+    section { padding: 20px; display: none; background: white; margin: 20px auto; width: 90%; max-width: 1000px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    section.active { display: block; }
+    h2 { color: #003366; }
+    img { width: 100%; max-height: 300px; object-fit: cover; border-radius: 8px; margin-bottom: 15px; }
+    footer { background: #003366; color: white; text-align: center; padding: 10px; margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Discover Washington, DC</h1>
+    <p>by Julia Boxwill</p>
+  </header>
+
+  <nav>
+    <a href="#" onclick="showSection('home')">Home</a>
+    <a href="#" onclick="showSection('historic')">Historic Sites</a>
+    <a href="#" onclick="showSection('neighborhoods')">Neighborhoods</a>
+    <a href="#" onclick="showSection('gems')">Hidden Gems</a>
+    <a href="#" onclick="showSection('tips')">Travel Tips</a>
+  </nav>
+
+  <section id="home" class="active">
+    <h2>Welcome to Washington, DC</h2>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Washington_DC_view.jpg" alt="Washington DC skyline">
+    <p>The city of Washington, DC, thrives on its distinctive fusion of innovation, culture, and history. Beyond famous monuments, DC offers hidden jewels, vibrant neighborhoods, and insider experiences. Explore this guide for a full immersion into the spirit of the nation's capital!</p>
+  </section>
+
+  <section id="historic">
+    <h2>Historic Sites</h2>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/National_Mall.jpg" alt="National Mall">
+    <p>The National Mall stretches over two miles and features iconic landmarks like the U.S. Capitol, Lincoln Memorial, and Washington Monument. Nearby, discover the serene Tidal Basin and beautiful Constitution Gardens.</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/1/12/White_House_from_National_Mall.jpg" alt="White House">
+    <p>Close to the Mall lies the White House and Lafayette Square. Though public tours require reservations, viewing from Pennsylvania Avenue offers a memorable experience. Don’t miss the National Archives to see the Constitution and Declaration of Independence.</p>
+  </section>
+
+  <section id="neighborhoods">
+    <h2>Neighborhoods</h2>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Georgetown_Canal.jpg" alt="Georgetown Canal">
+    <p><strong>Georgetown:</strong> Walk cobblestone streets, shop boutiques, explore the C&O Canal, and dine by the Potomac River. Perfect for a full day and evening adventure.</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/U_Street_Corridor.jpg" alt="U Street Corridor">
+    <p><strong>U Street Corridor:</strong> Known as "Black Broadway," U Street offers live jazz, street art, and delicious soul food. Don’t miss a visit to the historic Howard Theatre or Ben's Chili Bowl.</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Eastern_Market_DC_2009.jpg" alt="Eastern Market">
+    <p><strong>Eastern Market:</strong> Dive into local life at this Capitol Hill weekend market with fresh produce, handmade goods, and a charming neighborhood vibe.</p>
+  </section>
+
+  <section id="gems">
+    <h2>Hidden Gems</h2>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Phillips_Collection.jpg" alt="Phillips Collection">
+    <p>Beyond the Smithsonian museums, explore unique spots like the Phillips Collection, National Postal Museum, and Hirshhorn Museum and Sculpture Garden. For architecture enthusiasts, the National Building Museum offers fantastic exhibits.</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Rock_Creek_Park_bridge.jpg" alt="Rock Creek Park">
+    <p>Nature lovers should visit Rock Creek Park for outdoor adventures or the Kenilworth Aquatic Gardens to see seasonal lotus blooms—a truly off-the-beaten-path experience.</p>
+  </section>
+
+  <section id="tips">
+    <h2>Travel Tips</h2>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/DC_Metro_train.jpg" alt="DC Metro">
+    <p>The Metrorail system is clean, efficient, and a great way to explore DC. Get a SmarTrip card for easy access and discounted fares. Comfortable shoes are essential for walking the National Mall!</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/57/DC_Food_truck_scene.jpg" alt="DC Food Truck">
+    <p>DC's food scene has exploded, from food trucks to Michelin-starred dining. Reservations are recommended. Try local favorites like Shaw's Ethiopian restaurants and Maryland-style crab cakes.</p>
+    <p>Washington, DC is ready to welcome you with open arms. Whether you're interested in history, art, food, or new experiences, you'll find endless adventures waiting in the nation's capital.</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Discover Washington, DC | Created by Julia Boxwill</p>
+  </footer>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('section').forEach(section => {
+        section.classList.remove('active');
+      });
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+</body>
+</html>
